@@ -306,9 +306,9 @@ def viewdata():
 
     requestedsite = input()
     try:
-        integer_value = int(requestedsite)
+        rownr = int(requestedsite)
         conn = sqlite3.connect('passwords.db')
-        if not row_exists(integer_value, conn):
+        if not row_exists(rownr, conn):
             print("You don't have that site yet!")
             conn.close()
         else:
